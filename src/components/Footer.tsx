@@ -20,9 +20,9 @@ const Footer: React.FC = () => {
         </Col>
         <Col xs={24} md={6}>
           <h3>Contact</h3>
-          <p>info@duragreenlighting.co.uk</p>
-          <p>+44 7355 354792</p>
-          <p>9 Beech Street, Leicester, UK</p>
+          <p>hoangminh.tran2139@gmail.com</p>
+          <p>+84 982994297</p>
+          <p>65 Nguyen Du, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam</p>
         </Col>
         <Col xs={24} md={6}>
           <h3>Join us</h3>
