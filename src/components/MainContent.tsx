@@ -15,7 +15,7 @@ const mainCategories = [
     imgSrc: 'https://duragreenlighting.com.vn/wp-content/uploads/2024/04/CEILING-SURFACE.png',
   },
   {
-    title: 'Suspension',
+    title: 'Cu em',
     link: 'https://duragreenlighting.com.vn/product-category/suspension/',
     // imgSrc: 'https://duragreenlighting.com.vn/wp-content/uploads/2024/04/SUSPENSTION.png',
     imgSrc: 'https://scontent.fsgn1-1.fna.fbcdn.net/v/t39.30808-6/675316674_1528743258596116_1080220613491630171_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a0f3c3&_nc_eui2=AeEHNjexNHHu3nVhveT93GR0heMNzWPMqkiF4w3NY8yqSBJ3X31VkCDw1WXApMYMMH4cHdQLK3JRhieaW0_jfG9F&_nc_ohc=h4zr29g9wdIQ7kNvwGgJC1r&_nc_oc=AdruG_9d7A7gNFz5wWwBVKJzSM0e-h4QZ38ufit4-B1SQ3efQyWUOgeDMglF8m-SvII&_nc_zt=23&_nc_ht=scontent.fsgn1-1.fna&_nc_gid=3Yy27_rTCF3ziCwAuEEUrQ&oh=00_Af0-DC-nh7YFxsZRdNCXqG1XhoOjMlSVybI4fgVw9qnkWw&oe=69EFB4A7'
@@ -41,7 +41,7 @@ const subCategories = [
     imgSrc: 'https://duragreenlighting.com.vn/wp-content/uploads/2024/04/4022de5a99d4e3805c388fb97450ec9-1024x1024.png',
   },
   {
-    title: 'Led Strip',
+    title: 'Diệu Thư',
     link: 'https://duragreenlighting.com.vn/product-category/led-strip/',
     // imgSrc: 'https://duragreenlighting.com.vn/wp-content/uploads/2024/05/111.png',
     imgSrc: 'https://scontent.fsgn1-1.fna.fbcdn.net/v/t39.30808-6/618121084_1532536004713656_8023546562459392059_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeH8CeI8S1KnIs8n9iSvBy2sibIKIHuNyO6Jsgoge43I7nZywRxlSSN9snMs7RyDj3LvObMgjqU_kIH54nVs84KX&_nc_ohc=fE15fXy4T00Q7kNvwHPECoP&_nc_oc=AdqtVX9pxZ0rUuyfFFDqu48ignRvFxeolBduPWEtIVxo46MKetoo9VRyedmvfbjkQZs&_nc_zt=23&_nc_ht=scontent.fsgn1-1.fna&_nc_gid=9qvWWdFlVs3QW0fSVwGJDw&oh=00_Af1RwxcyIHWjoP3NjffC9a4cuHZMUNk29H2dwIEz14cYrg&oe=69EFB6D5'
