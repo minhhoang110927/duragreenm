@@ -1,0 +1,49 @@
+/* src/App.css */
+
+/* 1. Import font trực tiếp từ file woff2 của web gốc */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: fallback;
+  src: url('https://duragreenlighting.com.vn/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Cardo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url('https://duragreenlighting.com.vn/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');
+}
+
+/* 2. Reset CSS mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Áp dụng font Inter cho toàn bộ website */
+body, html {
+  width: 100%;
+  min-height: 100vh;
+  /* Dùng font Inter vừa import làm font mặc định */
+  font-family: 'Inter', sans-serif; 
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+/* Fix lỗi Vite gán max-width */
+#root {
+  width: 100vw;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6, .custom-header .ant-menu {
+  font-family: 'Josefin Sans', sans-serif;
+}

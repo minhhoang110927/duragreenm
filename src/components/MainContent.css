@@ -1,0 +1,157 @@
+/* src/components/MainContent.css */
+
+.main-content {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* ========================================= */
+/* 1. Phần Danh mục sản phẩm (Product Categories) */
+/* ========================================= */
+.categories-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cột trên màn hình lớn */
+  width: 100%;
+  /* Elementor setup 'gap-no' nghĩa là không có khoảng trống giữa các cột */
+}
+
+/* Hiển thị danh mục phụ (Hàng thứ 2) */
+.categories-section.sub-categories {
+    /* Các mục phụ có thể có layout khác nếu cần, hiện tại giữ giống hàng trên */
+}
+
+.category-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8; /* Nền xám nhạt như trong ảnh mẫu bạn từng gửi */
+  border: 1px solid #eaeaea; /* Viền mỏng để phân tách (tùy chọn) */
+  padding: 40px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.category-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Căn chỉnh hình ảnh sản phẩm */
+.category-img-container {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.category-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.category-item:hover .category-img-container img {
+  transform: scale(1.05); /* Hiệu ứng zoom nhẹ khi hover */
+}
+
+/* Tiêu đề danh mục */
+.category-title {
+  color: #333333;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.category-item:hover .category-title {
+    color: #000;
+}
+
+/* ========================================= */
+/* 2. Phần "Why DuraGreen" Banner            */
+/* ========================================= */
+.why-duragreen-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* ========================================= */
+/* 3. Phần "Instagram" Gallery               */
+/* ========================================= */
+.instagram-section {
+  padding-bottom: 50px;
+}
+
+.instagram-title-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.instagram-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 ảnh trên một hàng ngang */
+  width: 100%;
+}
+
+.gallery-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Đảm bảo khung ảnh luôn hình vuông */
+  overflow: hidden;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Hiệu ứng overlay đen mờ khi hover vào ảnh Instagram */
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ========================================= */
+/* Responsive Design (Cho Tablet & Mobile)   */
+/* ========================================= */
+@media (max-width: 1024px) {
+  .categories-section, .instagram-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 cột trên Tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-section, .instagram-gallery {
+    grid-template-columns: 1fr; /* 1 cột trên Mobile */
+  }
+}

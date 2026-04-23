@@ -1,0 +1,182 @@
+/* src/components/Header.css */
+
+.custom-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px; /* Giảm padding một chút để vừa với Logo thật */
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+/* Chia layout 3 cột: 25% - 50% - 25% giống Elementor */
+.header-col {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  width: 25%;
+  justify-content: flex-start;
+}
+
+.menu-container {
+  width: 50%;
+  justify-content: center;
+}
+
+.search-container {
+  width: 25%;
+  justify-content: flex-end;
+}
+
+/* === Xử lý Logo === */
+.logo-img {
+  width: 180px; /* Cỡ ảnh vừa phải, có thể tinh chỉnh */
+  height: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Khi Header trong suốt: Ép logo đen thành màu trắng để nổi trên nền Video */
+.custom-header.transparent .logo-img {
+  filter: brightness(0) invert(1);
+}
+
+/* Khi Header nền trắng (scrolled): Trả logo về màu đen gốc */
+.custom-header.scrolled .logo-img {
+  filter: none;
+}
+
+/* === Trạng thái cuộn chuột === */
+.custom-header.scrolled {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.custom-header.transparent {
+  background-color: transparent;
+}
+
+/* Đổi màu icon Search và Text Menu */
+.custom-header.scrolled .search-icon,
+.custom-header.scrolled .ant-menu-horizontal {
+  color: #000000;
+}
+
+.custom-header.transparent .search-icon,
+.custom-header.transparent .ant-menu-horizontal {
+  color: #ffffff;
+}
+
+/* === Ghi đè Ant Design Menu === */
+.custom-header .ant-menu {
+  border-bottom: none !important;
+  font-size: 15px;
+  font-family: 'Josefin Sans', sans-serif;
+  background: transparent !important;
+  width: 100%;
+  justify-content: center;
+}
+
+.custom-header .ant-menu-item::after,
+.custom-header .ant-menu-submenu::after {
+  display: none !important;
+}
+
+.custom-header .search-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* ================================================= */
+/* Cấu hình Mega Menu Dropdown (2 cột)               */
+/* ================================================= */
+
+.mega-menu-2-cols .ant-menu-sub {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  padding: 10px !important;
+  width: 400px !important; /* Khóa cứng chiều ngang tổng cộng là 400px */
+  max-width: 400px !important; /* Ngăn chặn AntD tự động kéo giãn thêm */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 4px !important;
+  background-color: #ffffff !important;
+}
+
+.mega-menu-2-cols .ant-menu-item {
+  width: 50% !important; /* Mỗi cột sẽ chiếm chính xác 200px */
+  margin: 0 !important;
+  color: #333333 !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  padding: 0 15px !important;
+}
+
+.mega-menu-2-cols .ant-menu-item:hover {
+  background-color: #f5f5f5 !important;
+  color: #000 !important;
+  border-radius: 4px !important;
+}
+
+.mega-menu-2-cols .ant-menu-sub > div:not(.ant-menu-item),
+.mega-menu-2-cols .ant-menu-sub > li:not(.ant-menu-item) {
+  display: none !important;
+}
+
+/* ================================================= */
+/* Responsive Header (Mobile & Tablet) - BẠN BỊ THIẾU PHẦN NÀY */
+/* ================================================= */
+
+/* Mặc định ẩn nút Hamburger trên Desktop */
+.mobile-menu-btn {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.custom-header.scrolled .mobile-menu-btn {
+  color: #000;
+}
+.custom-header.transparent .mobile-menu-btn {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .custom-header {
+    padding: 10px 20px; /* Thu nhỏ lề 2 bên trên mobile */
+  }
+
+  /* Ẩn menu desktop */
+  .desktop-menu {
+    display: none !important;
+  }
+
+  /* Hiện nút Hamburger */
+  .mobile-menu-btn {
+    display: block;
+    width: 25%; /* Chiếm 1/4 header để cân bằng với Search icon */
+  }
+
+  /* Căn chỉnh lại Logo cho Mobile (nằm giữa) */
+  .logo-container {
+    width: 50%;
+    justify-content: center;
+  }
+
+  .logo-img {
+    width: 140px; /* Logo nhỏ lại một chút */
+  }
+
+  /* Căn chỉnh Search icon */
+  .search-container {
+    width: 25%;
+  }
+}
